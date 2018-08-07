@@ -5,7 +5,7 @@ use local::lib 'extlib';
 use Mojolicious::Lite;
 
 use constant {
-	PORT => 3000
+	PORT => 3514
 };
 
 get '/' => sub {
@@ -34,7 +34,12 @@ sub get_random_number {
 	return $min + int rand($max - $min);
 }
 
-app->start('daemon', '-l', 'http://*:' . PORT);
+app->log->level('error');
+
+say 'The test page is about to run, use your favorite browser to access it.';
+
+app->start('daemon', '-m', 'production', '-l', 'http://*:' . PORT);
+ 
 
 __DATA__
 

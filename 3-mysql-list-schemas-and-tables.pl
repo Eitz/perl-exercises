@@ -50,7 +50,11 @@ package DBHelper;
 
 sub new {
 	my ($class, $args) = @_;
-	my $conn = DBI->connect($args->{connection}, $args->{user}, $args->{pass}) or die $!;
+	my $conn = DBI->connect($args->{connection}, $args->{user}, $args->{pass}) or say $!;
+	if (!$conn) {
+		say "This tests depends on a running MySQL server. Setup configuration in 'extra-files/config.ini'.";
+		exit 1;
+	}
 	return bless { conn => $conn }, $class;
 }
 
