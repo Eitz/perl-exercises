@@ -1,6 +1,6 @@
 # Instructions
 
-To run the tests, some dependencies are necessary. This project uses `cpanm` and `local::lib` so that it does not pollute your env with the dependencies it uses (it installs them in the project directory).
+To run the tests some dependencies are necessary. This project uses `cpanm` and `local::lib` so that it does not pollute your env with the dependencies it uses (it installs them in the project directory).
 
 To install the dependencies and run the tests:
 
