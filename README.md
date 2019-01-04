@@ -1,12 +1,12 @@
 # Instructions
 
-To run the tests some dependencies are necessary. This project uses `cpanm` and `local::lib` so that it does not pollute your env with the dependencies it uses (it installs them in the project directory).
+To run the exercices some dependencies are necessary. This project uses `cpanm` and `local::lib` so that it does not pollute your env with the dependencies it uses (it installs them in the project directory).
 
-To install the dependencies and run the tests:
+To install the dependencies and run the exercices:
 
-1. cd to the test directory (test-eqs)
+1. cd to the exercice directory (perl-exercises)
 2. Execute `install-deps.sh` (or `install-deps.bat` if using Windows) to install the dependencies.
-3. Run each test with `perl n-test-name.pl` (test 1 is the only one that requires a parameter)
+3. Run each exercice with `perl n-exercice-name.pl` (exercice 1 is the only one that requires a parameter)
 
 ## Troubleshooting
 
@@ -22,12 +22,12 @@ Tip: a clear install of strawberry-perl is able to install all deps successfully
 
 `$ cpan DBI DBD::mysql Mojolicious Config::Simple`
 
-3. If the above method was used, lines mentioning `local::lib` in the perl test files must be removed.
+3. If the above method was used, lines mentioning `local::lib` in the perl exercice files must be removed.
 
-### Unable to connect to MySQL in test 3?
+### Unable to connect to MySQL in exercice 3?
 
-Test 3 depends on `extra-files/config.ini`, set your connection string, user and password in it.
+Exercice 3 depends on `extra-files/config.ini`, set your connection string, user and password in it.
 
-### In test 4 this happens: Can't create listen socket: Address already in use
+### In exercice 4 this happens: Can't create listen socket: Address already in use
 
 The 3514 port is already in use, please stop the service that is using it or edit the perl file to use another port.
